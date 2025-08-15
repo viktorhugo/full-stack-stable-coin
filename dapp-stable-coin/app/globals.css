@@ -1,0 +1,155 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: oklch(0.98 0.01 220);
+  --foreground: oklch(0.15 0.02 220);
+  --card: oklch(0.99 0.005 220);
+  --card-foreground: oklch(0.15 0.02 220);
+  --popover: oklch(0.99 0.005 220);
+  --popover-foreground: oklch(0.15 0.02 220);
+  --primary: oklch(0.55 0.15 220);
+  --primary-foreground: oklch(0.98 0.01 220);
+  --secondary: oklch(0.45 0.12 160);
+  --secondary-foreground: oklch(0.98 0.01 220);
+  --muted: oklch(0.94 0.01 220);
+  --muted-foreground: oklch(0.5 0.02 220);
+  --accent: oklch(0.5 0.14 160);
+  --accent-foreground: oklch(0.98 0.01 220);
+  --destructive: oklch(0.6 0.2 25);
+  --destructive-foreground: oklch(0.98 0.01 220);
+  --border: oklch(0.9 0.01 220);
+  --input: oklch(0.9 0.01 220);
+  --ring: oklch(0.55 0.15 220);
+  --chart-1: oklch(0.55 0.15 220);
+  --chart-2: oklch(0.5 0.14 160);
+  --chart-3: oklch(0.45 0.12 180);
+  --chart-4: oklch(0.6 0.16 200);
+  --chart-5: oklch(0.4 0.1 140);
+  --radius: 0.75rem;
+  --sidebar: oklch(0.97 0.01 220);
+  --sidebar-foreground: oklch(0.15 0.02 220);
+  --sidebar-primary: oklch(0.55 0.15 220);
+  --sidebar-primary-foreground: oklch(0.98 0.01 220);
+  --sidebar-accent: oklch(0.94 0.01 220);
+  --sidebar-accent-foreground: oklch(0.15 0.02 220);
+  --sidebar-border: oklch(0.9 0.01 220);
+  --sidebar-ring: oklch(0.55 0.15 220);
+}
+
+/* Aplicando tema oscuro espectacular con negro suave y verde lima vibrante */
+.dark {
+  --background: oklch(0.08 0.01 220); /* Negro suave para fondo principal */
+  --foreground: oklch(0.95 0.01 220); /* Blanco suave para texto */
+  --card: oklch(0.12 0.02 220); /* Gris oscuro para tarjetas */
+  --card-foreground: oklch(0.95 0.01 220); /* Blanco suave para texto en tarjetas */
+  --popover: oklch(0.12 0.02 220); /* Gris oscuro para popovers */
+  --popover-foreground: oklch(0.95 0.01 220); /* Blanco suave para texto en popovers */
+  --primary: oklch(0.75 0.25 130); /* Verde lima vibrante para acciones principales */
+  --primary-foreground: oklch(0.08 0.01 220); /* Negro suave para texto en botones primarios */
+  --secondary: oklch(0.65 0.2 130); /* Verde lima más oscuro para acciones secundarias */
+  --secondary-foreground: oklch(0.08 0.01 220); /* Negro suave para texto en botones secundarios */
+  --muted: oklch(0.18 0.02 220); /* Gris medio para elementos silenciados */
+  --muted-foreground: oklch(0.65 0.01 220); /* Gris claro para texto silenciado */
+  --accent: oklch(0.7 0.22 130); /* Verde lima para acentos */
+  --accent-foreground: oklch(0.08 0.01 220); /* Negro suave para texto en acentos */
+  --destructive: oklch(0.65 0.25 25); /* Rojo para estados de error */
+  --destructive-foreground: oklch(0.95 0.01 220); /* Blanco para texto en errores */
+  --border: oklch(0.22 0.02 220); /* Gris oscuro para bordes */
+  --input: oklch(0.15 0.02 220); /* Gris muy oscuro para campos de entrada */
+  --ring: oklch(0.75 0.25 130); /* Verde lima para estados de foco */
+  --chart-1: oklch(0.75 0.25 130); /* Verde lima para gráficos */
+  --chart-2: oklch(0.65 0.2 130); /* Verde lima oscuro para gráficos */
+  --chart-3: oklch(0.55 0.15 130); /* Verde lima más oscuro para gráficos */
+  --chart-4: oklch(0.45 0.12 130); /* Verde lima muy oscuro para gráficos */
+  --chart-5: oklch(0.35 0.1 130); /* Verde lima ultra oscuro para gráficos */
+  --sidebar: oklch(0.1 0.01 220); /* Negro suave para sidebar */
+  --sidebar-foreground: oklch(0.95 0.01 220); /* Blanco suave para texto de sidebar */
+  --sidebar-primary: oklch(0.75 0.25 130); /* Verde lima para elementos primarios de sidebar */
+  --sidebar-primary-foreground: oklch(0.08 0.01 220); /* Negro suave para texto primario de sidebar */
+  --sidebar-accent: oklch(0.18 0.02 220); /* Gris medio para acentos de sidebar */
+  --sidebar-accent-foreground: oklch(0.95 0.01 220); /* Blanco suave para texto de acentos de sidebar */
+  --sidebar-border: oklch(0.22 0.02 220); /* Gris oscuro para bordes de sidebar */
+  --sidebar-ring: oklch(0.75 0.25 130); /* Verde lima para estados activos de sidebar */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  /* Agregando fuentes futuristas DM Sans */
+  --font-sans: var(--font-dm-sans);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* Agregando fondo con gradiente sutil y efectos visuales */
+    background-image: radial-gradient(circle at 20% 80%, rgba(0, 255, 0, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(0, 255, 0, 0.03) 0%, transparent 50%);
+    background-attachment: fixed;
+  }
+}
+
+/* Agregando efectos de glow y animaciones para componentes destacados */
+@layer components {
+  .glow-effect {
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .glow-effect:hover {
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.2);
+  }
+
+  .neon-border {
+    border: 1px solid rgba(0, 255, 0, 0.3);
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.1), inset 0 0 10px rgba(0, 255, 0, 0.05);
+  }
+
+  .cyber-card {
+    background: rgba(18, 18, 18, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 255, 0, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 255, 0, 0.05);
+  }
+}
