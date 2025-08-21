@@ -90,10 +90,11 @@ export function Navbar() {
                 <Button
                   onClick={() => handleConnect("injected")}
                   disabled={isPending}
-                  className="bg-gradient-to-r from-lime-500 to-emerald-500 hover:from-lime-400 hover:to-emerald-400 text-black font-bold px-6 py-2 rounded-xl shadow-lg shadow-lime-500/25 hover:shadow-lime-500/40 transition-all duration-300 transform hover:scale-105"
+                  className="bg-gradient-to-r from-lime-500 to-emerald-500 hover:from-lime-400 hover:to-emerald-400 text-black 
+                    font-bold px-6 py-2 rounded-xl shadow-lg shadow-lime-500/25 hover:shadow-lime-500/40 transition-all duration-300 transform hover:scale-105"
                 >
                   <Wallet className="w-4 h-4 mr-2" />
-                  {isPending ? "Conectando..." : "Conectar Wallet"}
+                  {isPending ? "Connecting..." : "Connect Wallet"}
                 </Button>
               </div>
             ) : (
